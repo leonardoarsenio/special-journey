@@ -1,0 +1,123 @@
+
+/* ==============================
+   CARDS
+============================== */
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #07111F;
+}
+
+.btn-secondary {
+  background: var(--color-blue);
+  color: white;
+}
+
+/* ==============================
+   FORM FIELDS
+============================== */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  color: var(--color-muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 13px 14px;
+  background: #07111F;
+  color: var(--color-text);
+  border: 1px solid #29415A;
+  border-radius: 8px;
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+}
+
+/* ==============================
+   STATUS BADGES
+============================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-success {
+  background: rgba(22, 199, 132, 0.15);
+  color: var(--color-success);
+}
+
+.badge-warning {
+  background: rgba(245, 185, 66, 0.15);
+  color: var(--color-warning);
+}
+
+.badge-danger {
+  background: rgba(240, 82, 82, 0.15);
+  color: var(--color-danger);
+}
+
+/* ==============================
+   ALERTS
+============================== */
+
+.alert {
+  padding: 14px 16px;
+  border-radius: 10px;
+  border-left: 4px solid;
+  background: var(--color-surface);
+}
+
+.alert-warning {
+  border-color: var(--color-warning);
+}
+
+.alert-danger {
+  border-color: var(--color-danger);
+}
+
+.alert-success {
+  border-color: var(--color-success);
+}
