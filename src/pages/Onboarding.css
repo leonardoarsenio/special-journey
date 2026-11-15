@@ -1,0 +1,235 @@
+
+.onboarding-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(circle at top right, rgba(22, 199, 176, 0.08), transparent 35%),
+    var(--color-bg);
+}
+
+.onboarding-card {
+  width: 100%;
+  max-width: 850px;
+  padding: 36px;
+  background: var(--color-surface);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.onboarding-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.onboarding-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.brand-symbol {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--color-primary);
+  color: var(--color-bg);
+  font-size: 18px;
+}
+
+.step-indicator,
+.onboarding-eyebrow {
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.onboarding-intro {
+  padding: 35px 0;
+}
+
+.onboarding-intro h1,
+.confirmation-card h1 {
+  margin: 10px 0;
+  font-size: clamp(25px, 4vw, 34px);
+  line-height: 1.2;
+}
+
+.onboarding-description {
+  max-width: 570px;
+  color: var(--color-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.form-section {
+  padding: 25px 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.section-number {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: rgba(22, 199, 176, 0.12);
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.section-heading h2 {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.section-heading p {
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-control {
+  min-height: 46px;
+}
+
+.form-control option {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.onboarding-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.onboarding-footer p,
+.onboarding-note {
+  max-width: 390px;
+  color: var(--color-muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.onboarding-footer .btn,
+.confirmation-actions .btn {
+  white-space: nowrap;
+}
+
+.confirmation-card {
+  max-width: 700px;
+}
+
+.confirmation-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 22px;
+  border-radius: 50%;
+  background: rgba(22, 199, 132, 0.15);
+  color: var(--color-success);
+  font-size: 25px;
+}
+
+.review-list {
+  margin: 28px 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.review-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  font-size: 13px;
+}
+
+.review-item span {
+  color: var(--color-muted);
+}
+
+.review-item strong {
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.confirmation-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .onboarding-page {
+    padding: 16px 10px;
+    align-items: flex-start;
+  }
+
+  .onboarding-card {
+    padding: 22px 17px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .onboarding-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .onboarding-footer .btn {
+    width: 100%;
+  }
+
+  .confirmation-actions {
+    flex-direction: column;
+  }
+
+  .confirmation-actions .btn {
+    width: 100%;
+  }
+
+  .step-indicator {
+    font-size: 9px;
+  }
+}

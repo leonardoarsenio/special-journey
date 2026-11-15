@@ -1,0 +1,100 @@
+.app-navigation {
+  min-height: 66px;
+  padding: 10px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #0B1B2D;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+  position: relative;
+  z-index: 5;
+}
+
+.app-navigation-brand,
+.app-navigation-links,
+.app-nav-link,
+.app-logout-button {
+  display: flex;
+  align-items: center;
+}
+
+.app-navigation-brand {
+  gap: 10px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.app-navigation-symbol {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  color: #16C7B0;
+  background: rgba(22, 199, 176, 0.12);
+  font-weight: 800;
+}
+
+.app-navigation-links {
+  gap: 8px;
+}
+
+.app-nav-link {
+  gap: 8px;
+  padding: 10px 13px;
+  border-radius: 8px;
+  color: #94A3B8;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.app-nav-link:hover,
+.app-nav-link.active {
+  color: #16C7B0;
+  background: rgba(22, 199, 176, 0.1);
+}
+
+.app-logout-button {
+  gap: 8px;
+  padding: 9px 12px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  color: #CBD5E1;
+  background: transparent;
+  font-size: 12px;
+}
+
+.app-logout-button:hover {
+  color: #F05252;
+  border-color: #F05252;
+}
+
+@media (max-width: 600px) {
+  .app-navigation {
+    padding: 10px 4%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .app-navigation-brand {
+    flex: 1;
+  }
+
+  .app-navigation-links {
+    order: 3;
+    width: 100%;
+  }
+
+  .app-nav-link {
+    flex: 1;
+    justify-content: center;
+    padding: 9px 5px;
+    font-size: 11px;
+  }
+
+  .app-logout-button {
+    padding: 8px;
+  }
+}

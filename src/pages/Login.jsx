@@ -1,5 +1,8 @@
-
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { startDemoSession } from '../services/sessionService';
+import { hasAstronautProfile } from '../services/profileService';
+
 import {
   Activity,
   LockKeyhole,
@@ -13,19 +16,32 @@ import {
 import './Login.css';
 
 function Login() {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
 
   function handleSubmit(event) {
-    event.preventDefault();
+  event.preventDefault();
+  setMessage('');
 
-    setMessage(
-      'A autenticação ainda não está ligada ao servidor. Esta é uma demonstração do frontend.'
-    );
+  if (!email.trim() || !password.trim()) {
+    setMessage('Preencha o email e a palavra-passe para continuar.');
+    return;
   }
 
+  // Inicia a sessão de demonstração
+  startDemoSession(email.trim());
+
+  // Se já existe um perfil, vai para o dashboard.
+  // Se for o primeiro acesso, vai para o cadastro.
+  if (hasAstronautProfile()) {
+    navigate('/dashboard', { replace: true });
+  } else {
+    navigate('/onboarding', { replace: true });
+  }
+}
   return (
     <main className="login-page">
 

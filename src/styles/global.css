@@ -27,7 +27,7 @@ body {
   min-height: 100vh;
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif 'Inter', sans-serif;
+  font-family:  'Inter', sans-serif;
 }
 
 button, input, textarea, select {
